@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'calculator';
+  leftOperandForm = new FormControl('0');
+  rightOperandForm = new FormControl('0');
+
+  result = '0';
+
+  add(): void {
+  }
+
+  sub(): void {
+  }
+
+  mul(): void {
+  }
+
+  div(): void {
+  }
 }
