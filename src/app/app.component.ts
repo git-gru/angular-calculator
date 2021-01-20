@@ -12,15 +12,25 @@ export class AppComponent {
 
   result = '0';
 
-  add(): void {
-  }
+  calculator(type: string): void {
+    let leftOperand = Number(this.leftOperandForm.value);
+    let rightOperand = Number(this.rightOperandForm.value);
 
-  sub(): void {
-  }
-
-  mul(): void {
-  }
-
-  div(): void {
+    switch(type) {
+      case 'add':
+        this.result = (leftOperand + rightOperand).toString();
+        break;
+      case 'sub':
+        this.result = (leftOperand - rightOperand).toString();
+        break;
+      case 'mul':
+        this.result = (leftOperand * rightOperand).toString();
+        break;
+      case 'div':
+        this.result = (leftOperand / rightOperand).toString();
+        break;
+      default:
+        break;
+    }
   }
 }
